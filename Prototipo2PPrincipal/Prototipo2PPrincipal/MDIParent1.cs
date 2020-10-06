@@ -12,13 +12,18 @@ namespace Prototipo2PPrincipal
 {
     public partial class MDIParent1 : Form
     {
-        private int childFormNumber = 0;
+        
 
         public MDIParent1()
         {
             InitializeComponent();
         }
 
-        
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CapaVista.FrmInventario frmInv = new CapaVista.FrmInventario();
+            frmInv.Show();
+            frmInv.MdiParent = this;
+        }
     }
 }
